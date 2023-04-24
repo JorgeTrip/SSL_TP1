@@ -66,7 +66,8 @@ int main() {
     entrada = fopen("entrada.txt", "r");
     salida = fopen("salida.txt", "w");
     if(entrada == NULL || salida == NULL) {
-        printf("Error al abrir los archivos");
+        printf("Error al abrir el archivo de entrada.\nPresione una tecla para finalizar.\n");
+        getchar();
         return 1;
     }
     char str[100];
@@ -76,5 +77,7 @@ int main() {
     }
     fclose(entrada);
     fclose(salida);
+    printf("Archivo de entrada leido, y archivo de salida generado exitosamente.\nPresione una tecla para finalizar.\n");
+    getchar();
     return 0;
 }
